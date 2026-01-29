@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import react from "react";
+import { View,Text,Button,TouchableOpacity,Image, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import MyImage from "./assets/favicon.png";
+const App=()=>{
+  return(
+    // <View>
+    //   <Text>Good Morning!</Text>
+    // </View>
+    <SafeAreaView>
+      <Text style={{"color":"purple", "fontWeight":900}}>Hey Prasanna!</Text>
+      <Button title="Click Me"/>
+      <TouchableOpacity>
+        <Text style={MyStyles.mytext}>Fade</Text>
+      </TouchableOpacity>
+      <Image source={MyImage}/>
+      <Image source={{uri:"https://adityauniversity.in/static/media/naac.c2dc2d03caf809852f0a.webp"}} style={{"width": 200, "height": 200}}/>
+    </SafeAreaView>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+export default App;
+const MyStyles=StyleSheet.create({
+  mytext:{
+    color: 'blue',
+    fontSize: 20
+  }
+})
