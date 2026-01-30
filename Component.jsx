@@ -9,15 +9,7 @@ const Component = () => {
       <StatusBar barStyle="light-content" hidden />
       <View style={[Mystyles.MystatusBar, { paddingTop: Results.top }]}></View>
       <Text>Aditya university</Text>
-    </>const App = () => {
-  return (
-    <>
-      <SafeAreaProvider>
-        <Component />
-      </SafeAreaProvider>
     </>
-  )
-}
   );
 };
 export default Component;
