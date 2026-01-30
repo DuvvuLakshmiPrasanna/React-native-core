@@ -2,23 +2,34 @@ import react from "react";
 import { View,Text,Button,TouchableOpacity,Image, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import MyImage from "./assets/favicon.png";
-const App=()=>{
-  return(
-    // <View>
-    //   <Text>Good Morning!</Text>
-    // </View>
-    <SafeAreaView>
-      <Text style={{"color":"purple", "fontWeight":900}}>Hey Prasanna!</Text>
-      <Button title="Click Me"/>
-      <TouchableOpacity>
-        <Text style={MyStyles.mytext}>Fade</Text>
-      </TouchableOpacity>
-      <Image source={MyImage}/>
-      <Image source={{uri:"https://adityauniversity.in/static/media/naac.c2dc2d03caf809852f0a.webp"}} style={{"width": 200, "height": 200}}/>
-    </SafeAreaView>
+import { StatusBar } from "react-native";
+import Component from "./Component";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+// const App=()=>{
+//   return(
+//     // <View>
+//     //   <Text>Good Morning!</Text>
+//     // </View>
+//     <SafeAreaView>
+//       <Text style={{"color":"purple", "fontWeight":900}}>Hey Prasanna!</Text>
+//       <Button title="Click Me"/>
+//       <TouchableOpacity>
+//         <Text style={MyStyles.mytext}>Fade</Text>
+//       </TouchableOpacity>
+//       <Image source={MyImage}/>
+//       <Image source={{uri:"https://adityauniversity.in/static/media/naac.c2dc2d03caf809852f0a.webp"}} style={{"width": 200, "height": 200}}/>
+//     </SafeAreaView>
+//   )
+// }
+const App = () => {
+  return (
+    <>
+      <SafeAreaProvider>
+        <Component />
+      </SafeAreaProvider>
+    </>
   )
 }
-
 
 export default App;
 const MyStyles=StyleSheet.create({
