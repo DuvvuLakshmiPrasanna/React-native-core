@@ -1,7 +1,8 @@
-import react from "react";
+import React from "react";
 import { View, StyleSheet, StatusBar, Text } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-const Component = () => {
+
+const ComponentDemo = () => {
   const Results = useSafeAreaInsets();
   console.log(Results);
   return (
@@ -12,7 +13,7 @@ const Component = () => {
     </>
   );
 };
-export default Component;
+export default ComponentDemo;
 
 const Mystyles = StyleSheet.create({
   MystatusBar: {
